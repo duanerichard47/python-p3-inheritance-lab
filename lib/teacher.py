@@ -17,6 +17,7 @@ class Teacher(User):
     "pytest -x flag to fail fast",
 ]
 
-    def teach(self,knowledge):
+    def teach(self,first_name,last_name,knowledge):
+        super().__init__(self,first_name,last_name)
         self.knowledge = knowledge
         return knowledge.random.randint(0,7)
